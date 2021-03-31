@@ -1,0 +1,146 @@
+.fondo-blanco{
+    position: absolute;
+    z-index: 2000;
+    background: $gris;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    width: 100%;
+    margin: -5rem auto 0 auto;
+    @include tablet{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+    }
+}
+
+.contenedor-cartas{
+    margin: 3rem 2rem;
+    @include grid(2, $separacion / 2.5);
+    .carta{
+        background: $blanco;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        &:hover{
+            transform: translateY(-5px) scale(1.005) translateZ(0);
+            box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+            0 24px 46px $gris;
+        }
+    }
+    .shopping{
+        .s{
+            background: $turqueza;
+        }
+        &:hover{
+            transition: 0.5s ease-out;
+            background: $turqueza;
+            .s{
+                transition: 0.5s ease-out;
+                background: $turqueza-fuerte;
+            }
+        }
+    }
+    .groceries{
+        .g{
+            background: $rojo;
+        }
+        &:hover{
+            transition: 0.5s ease-out;
+            background: $rojo;
+            .g{
+                transition: 0.5s ease-out;
+                background: #d18e8e;
+            }
+        }
+    }
+    .stats{
+        .st{
+            background: $morado-gris;
+        }
+        &:hover{
+            transition: 0.5s ease-out;
+            background: $morado-gris;
+            .st{
+                transition: 0.5s ease-out;
+                background: #B99EE5;
+            }
+        }
+    }
+    .ubers{
+        .u{
+            background: $lila;
+        }
+        &:hover{
+            transition: 0.5s ease-out;
+            background: $lila;
+            .u{
+                transition: 0.5s ease-out;
+                background: #AD83DF;
+            }
+        }
+    }
+    .dates{
+        .d{
+            background-color: $amarillo
+        }
+        &:hover{
+            transition: 0.5s ease-out;
+            background: $amarillo;
+            .d{
+                transition: 0.5s ease-out;
+                background: #E5C58F;
+            }
+        }
+    }
+    .cards{
+        .c{
+            background-color: $azul;
+        }
+        &:hover{
+            transition: 0.5s ease-out;
+            background: $azul;
+            .c{
+                transition: 0.5s ease-out;
+                background: #81CEE1;
+            }
+        }
+    }
+    @include tablet{
+        @include grid(3, 5rem);
+        .carta{
+            padding: 10rem 2rem;
+            width: 15rem;
+        }
+        .stats{
+            margin: -8rem 0 auto;
+        }
+        .ubers,.dates,.cards{
+            margin: -14rem 0 auto;
+        }
+    }
+    @include desktop{
+        .ubers,.dates,.cards{
+            margin: -44rem 0 auto;
+        }
+    }
+}
+
+.top{
+    margin: -8rem 0 auto;
+}
+
+.contenedor-svg{
+    margin-top: 2rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.texto-titulo{
+    font-weight: $bold;
+}
