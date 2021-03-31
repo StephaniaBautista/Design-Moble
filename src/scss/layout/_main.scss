@@ -6,6 +6,7 @@
     border-top-right-radius: 2rem;
     width: 100%;
     margin: -5rem auto 0 auto;
+    height: 50rem;
     @include tablet{
         display: flex;
         justify-content: center;
@@ -81,48 +82,22 @@
             }
         }
     }
-    .dates{
-        .d{
-            background-color: $amarillo
-        }
-        &:hover{
-            transition: 0.5s ease-out;
-            background: $amarillo;
-            .d{
-                transition: 0.5s ease-out;
-                background: #E5C58F;
-            }
-        }
-    }
-    .cards{
-        .c{
-            background-color: $azul;
-        }
-        &:hover{
-            transition: 0.5s ease-out;
-            background: $azul;
-            .c{
-                transition: 0.5s ease-out;
-                background: #81CEE1;
-            }
-        }
-    }
     @include tablet{
-        @include grid(3, 5rem);
+        @include grid(2, 5rem);
         .carta{
             padding: 10rem 2rem;
             width: 15rem;
         }
         .stats{
-            margin: -8rem 0 auto;
+            margin: -10rem 0 auto;
         }
-        .ubers,.dates,.cards{
-            margin: -14rem 0 auto;
+        .ubers{
+            margin: -10rem 0 auto;
         }
     }
     @include desktop{
-        .ubers,.dates,.cards{
-            margin: -44rem 0 auto;
+        .ubers,.stats,.cards{
+            margin: -40rem 0 auto;
         }
     }
 }
